@@ -19,6 +19,19 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    
+    <distributionManagement>
+		<repository>
+			<id>geneinsight-releases-repository</id>
+			<name>GeneInsight Release Repository</name>
+			<url>${geneinsight.releases.repo.url}</url>
+		</repository>
+		<snapshotRepository>
+			<id>geneinsight-snapshots-repository</id>
+			<name>GeneInsight Snapshot Repository</name>
+			<url>${geneinsight.snapshots.repo.url}</url>
+		</snapshotRepository>
+	</distributionManagement>
 
     <scm>
         <connection>scm:git:git@github.com:lbabb/yeoman-maven-plugin.git</connection>
@@ -26,7 +39,11 @@
         <url>git@github.com:lbabb/yeoman-maven-plugin.git</url>
     </scm>
 
-    <properties>
+	<properties>
+		<!-- Release Info -->
+		<geneinsight.releases.repo.url>http://pcpgm-scm.dipr.partners.org:8081/nexus/content/repositories/releases/</geneinsight.releases.repo.url>
+		<geneinsight.snapshots.repo.url>http://pcpgm-scm.dipr.partners.org:8081/nexus/content/repositories/snapshots/</geneinsight.snapshots.repo.url>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
